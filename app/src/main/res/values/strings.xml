@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ListaDeContatos</string>
+    <string name="login_title">LOGIN</string>
+    <string name="usuario">Usuário</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="icon_login">Icone</string>
 </resources>
