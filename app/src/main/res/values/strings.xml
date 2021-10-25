@@ -9,4 +9,7 @@
     <string name="registrar">Registrar</string>
     <string name="salvar">Salvar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="novoContato">Novo Contato</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
 </resources>

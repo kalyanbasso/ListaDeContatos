@@ -21,6 +21,8 @@ public class Banco  extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         String QUERY = "CREATE TABLE usuario ( id INTEGER PRIMARY KEY AUTOINCREMENT, usuario TEXT, senha TEXT )";
         db.execSQL(QUERY);
+        QUERY = "CREATE TABLE contatos (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, telefone TEXT, id_usar INTEGER)";
+        db.execSQL(QUERY);
         QUERY = "INSERT INTO usuario (usuario, senha) VALUES ('kalyan', '123')";
         db.execSQL(QUERY);
     }
@@ -66,4 +68,11 @@ public class Banco  extends SQLiteOpenHelper{
         db.execSQL(QUERY, new String[] {usuario, senha});
 
     }
+
+    void criaContato(String nome, String telefone, String id_user) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String QUERY = "INSERT INTO usuario (nome, telefone, id_user) VALUES (?, ?, ?)";
+        db.execSQL(QUERY, new String[] {nome, telefone, id_user});
+    }
+
 }

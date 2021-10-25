@@ -50,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
             Snackbar.make(view, "Ola " + user.getUsuario() + " " + user.getId() , Snackbar.LENGTH_LONG).show();
 
             if(user.getId() != 0){
-                Intent i = new Intent(getApplicationContext(), Contatos.class);
+                Intent i = new Intent(getApplicationContext(), NovoContato.class);
+                i.putExtra("id_user", Integer.toString(user.getId()));
+                Snackbar.make(view, "saindo " +  user.getId(), Snackbar.LENGTH_LONG).show();
                 startActivity(i);
             } else {
                 Snackbar.make(view, "Usuário ou senha incorretos" , Snackbar.LENGTH_LONG).show();
