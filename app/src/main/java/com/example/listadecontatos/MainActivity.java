@@ -44,13 +44,11 @@ public class MainActivity extends AppCompatActivity {
         if(editUsuario.isEmpty() || editSenha.isEmpty()){
             Snackbar.make(view, "Usuário ou Senha vazio", Snackbar.LENGTH_SHORT).show();
         } else {
-//            Snackbar.make(view, "TENTANDO LOGAR " + editUsuario + " e " + editSenha, Snackbar.LENGTH_SHORT).show();
             Usuario user = db.login(editUsuario, editSenha);
-//            Log.d("AAAAA", user.getId() + " " + user.getUsuario() + " " + user.getSenha() + " " );
             Snackbar.make(view, "Ola " + user.getUsuario() + " " + user.getId() , Snackbar.LENGTH_LONG).show();
 
             if(user.getId() != 0){
-                Intent i = new Intent(getApplicationContext(), NovoContato.class);
+                Intent i = new Intent(getApplicationContext(), Contatos.class);
                 i.putExtra("id_user", Integer.toString(user.getId()));
                 Snackbar.make(view, "saindo " +  user.getId(), Snackbar.LENGTH_LONG).show();
                 startActivity(i);

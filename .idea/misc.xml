@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/android/app/src/main/res/layout/activity_contatos.xml" value="0.1" />
+        <entry key="..\:/android/app/src/main/res/layout/activity_contatos.xml" value="0.25" />
+        <entry key="..\:/android/app/src/main/res/layout/activity_detalhes.xml" value="0.22" />
+        <entry key="..\:/android/app/src/main/res/layout/activity_editar_contato.xml" value="0.20520833333333333" />
         <entry key="..\:/android/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/android/app/src/main/res/layout/activity_novo_contato.xml" value="0.36666666666666664" />
         <entry key="..\:/android/app/src/main/res/layout/activity_registrar.xml" value="0.33" />

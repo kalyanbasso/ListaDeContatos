@@ -47,6 +47,8 @@ public class Registrar extends AppCompatActivity {
         } else {
             db.criaUsuario(editUsuario, editSenha);
             Snackbar.make(view, "Ola " + editUsuario, Snackbar.LENGTH_LONG).show();
+            Intent i = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(i);
         }
     }
 }

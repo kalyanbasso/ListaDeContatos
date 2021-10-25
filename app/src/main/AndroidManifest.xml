@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ListaDeContatos">
         <activity
+            android:name=".editarContato"
+            android:exported="true" />
+        <activity
+            android:name=".Detalhes"
+            android:exported="true" />
+        <activity
             android:name=".NovoContato"
             android:exported="true" />
         <activity

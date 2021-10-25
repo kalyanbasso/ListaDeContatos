@@ -12,4 +12,8 @@
     <string name="novoContato">Novo Contato</string>
     <string name="nome">Nome</string>
     <string name="telefone">Telefone</string>
+    <string name="voltar">Voltar</string>
+    <string name="exluir">Excluir</string>
+    <string name="editar">Editar</string>
+    <string name="editarContato">Editar Contato</string>
 </resources>
