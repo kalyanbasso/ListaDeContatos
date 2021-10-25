@@ -14,22 +14,13 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="176dp"
-            android:layout_height="140dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            app:srcCompat="@drawable/agenda_icon"
-            android:contentDescription="@string/icon_login" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:gravity="center"
-            android:text="@string/login_title"
+            android:text="@string/registrar"
             android:textColor="@color/black"
             android:textSize="28sp"
             android:textStyle="bold" />
@@ -62,6 +53,20 @@
             android:padding="15dp"
             tools:ignore="TextContrastCheck" />
 
+        <EditText
+            android:id="@+id/editConfirmSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/confirmSenha"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="15dp"
+            tools:ignore="TextContrastCheck" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,23 +74,23 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/bt_registrar"
+                android:id="@+id/bt_cancelar"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
-                android:backgroundTint="#004169"
-                android:text="@string/registrar"
+                android:backgroundTint="#687B87"
+                android:text="@string/cancelar"
                 android:textColor="@color/white" />
 
             <Button
-                android:id="@+id/bt_login"
+                android:id="@+id/bt_salvar"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
                 android:backgroundTint="#004169"
-                android:text="@string/login"
+                android:text="@string/salvar"
                 android:textColor="@color/white"
                 app:rippleColor="@color/white" />
 

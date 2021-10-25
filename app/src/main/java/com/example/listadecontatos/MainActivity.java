@@ -2,6 +2,7 @@ package com.example.listadecontatos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,10 +25,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btnLogin = findViewById(R.id.bt_login);
+        Button btnRegistrar = findViewById(R.id.bt_registrar);
         usuario = findViewById(R.id.editUsuario);
         senha = findViewById(R.id.editSenha);
 
         btnLogin.setOnClickListener(this::handleLogin);
+        btnRegistrar.setOnClickListener(this::handleRegistrar);
+    }
+
+    private void handleRegistrar(View view) {
+        Intent i = new Intent(getApplicationContext(), Registrar.class);
+        startActivity(i);
     }
 
     private void handleLogin(View view) {
@@ -36,10 +44,18 @@ public class MainActivity extends AppCompatActivity {
         if(editUsuario.isEmpty() || editSenha.isEmpty()){
             Snackbar.make(view, "Usuário ou Senha vazio", Snackbar.LENGTH_SHORT).show();
         } else {
-            Snackbar.make(view, "TENTANDO LOGAR " + editUsuario + " e " + editSenha, Snackbar.LENGTH_SHORT).show();
+//            Snackbar.make(view, "TENTANDO LOGAR " + editUsuario + " e " + editSenha, Snackbar.LENGTH_SHORT).show();
             Usuario user = db.login(editUsuario, editSenha);
-            Log.d("AAAAA", user.getId() + " " + user.getUsuario() + " " + user.getSenha() + " " );
-            Snackbar.make(view, "Ola " + user.getUsuario(), Snackbar.LENGTH_LONG).show();
+//            Log.d("AAAAA", user.getId() + " " + user.getUsuario() + " " + user.getSenha() + " " );
+            Snackbar.make(view, "Ola " + user.getUsuario() + " " + user.getId() , Snackbar.LENGTH_LONG).show();
+
+            if(user.getId() != 0){
+                Intent i = new Intent(getApplicationContext(), Contatos.class);
+                startActivity(i);
+            } else {
+                Snackbar.make(view, "Usuário ou senha incorretos" , Snackbar.LENGTH_LONG).show();
+            }
+
         }
     }
 }

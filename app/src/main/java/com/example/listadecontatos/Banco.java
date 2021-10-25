@@ -47,8 +47,8 @@ public class Banco  extends SQLiteOpenHelper{
 
         Usuario response = new Usuario();
 
-        String selectQuery = "SELECT id, usuario, senha FROM usuario WHERE usuario = ?";
-        Cursor cursor = db.rawQuery(selectQuery, new String[] { usuario });
+        String selectQuery = "SELECT id, usuario, senha FROM usuario WHERE usuario = ? AND senha = ?";
+        Cursor cursor = db.rawQuery(selectQuery, new String[] { usuario, senha });
 
         if(cursor.moveToFirst()){
             response.setId(cursor.getInt(0));
@@ -58,5 +58,12 @@ public class Banco  extends SQLiteOpenHelper{
         cursor.close();
 
         return response;
+    }
+
+    void criaUsuario(String usuario, String senha) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String QUERY = "INSERT INTO usuario (usuario, senha) VALUES (?, ?)";
+        db.execSQL(QUERY, new String[] {usuario, senha});
+
     }
 }

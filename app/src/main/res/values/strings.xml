@@ -3,6 +3,10 @@
     <string name="login_title">LOGIN</string>
     <string name="usuario">Usuário</string>
     <string name="senha">Senha</string>
+    <string name="confirmSenha">Comfirmar Senha</string>
     <string name="login">Login</string>
     <string name="icon_login">Icone</string>
+    <string name="registrar">Registrar</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
